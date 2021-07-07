@@ -5,9 +5,10 @@
   <li>pip install django</li>
   <li>pip install django-filter</li>
 </ul>
-<b>Start Project</b>
+<b>2.Start Project</b> <br>
 django-admin startproject website
-<b>python manage.py startapp clustering<b>
+<b>3.Start App<b> <br>
+python manage.py startapp clustering
 
 
 python manage.py createsuperuser
