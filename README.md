@@ -8,6 +8,7 @@
 python manage.py createsuperuser
 
 python manage.py makemigrations
+<br>
 python manage.py migrate
 
 # For run server
