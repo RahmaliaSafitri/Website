@@ -6,7 +6,7 @@
   <li>pip install django-filter</li>
 </ul>
 <b>2.Start Project</b> <br>
-django-admin startproject website <br>
+django-admin startproject website <br> <br>
 <b>3.Start App<b> <br>
 python manage.py startapp clustering
 
