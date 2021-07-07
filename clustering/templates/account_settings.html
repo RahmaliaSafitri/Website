@@ -1,0 +1,59 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+	.row {
+		min-height: 500px;
+    	margin: 10px auto;
+	}
+	.profile-pic {
+		max-width: 200px;
+		max-height:200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+	form p {
+		margin-left: 30px;
+    	border-bottom: double;
+	}
+
+	p input{
+		border: none;
+		width:100;
+		background-image: none;
+		margin-left: 70px;
+	}
+
+	.submit {
+		background: #73afba;
+		margin-top: 30px;
+		margin-left: 30px;
+		border-color: #73afba;
+	}
+
+</style>
+
+<br>
+<div class="row">
+	<div class="col-md-3">
+		<div class="card card-body">
+			<a class="btn btn-warning" href="{% url 'home' %}"> &#8592; Back to Profile</a>
+			<hr>
+			<h3 style="text-align: center">Account Settings</h3>
+			<hr>
+			<img class="profile-pic" src="{{request.user.customer.profile_pic.url}}" >
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="card card-body">
+			<form method="POST" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.as_p}}
+			<input class="btn btn-primary submit" type="submit" name="Update Information">
+			</form>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

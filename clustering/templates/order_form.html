@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+	body {
+    min-height: 100vh;
+    background-image: linear-gradient(
+          rgba(0, 0, 0, 0.4), 
+          rgba(0, 0, 0, 0.4)
+        ), url("{% static '/images/cover.jpg' %}") !important;
+	}
+	.form {
+		margin: auto;
+	}
+    
+}
+</style>
+
+<body>
+	<div class="row">
+		<div class="col-md-6 mx-auto">
+			<div class="card card-body form">
+
+				<form action="" method="POST">
+					{% csrf_token %}
+
+					{{ form.management_form }}
+					{% for field in form %}
+						{{field}}
+						<hr>
+					{% endfor %}
+					
+					<input type="submit" name="Submit">
+				</form>
+
+			</div>
+		</div>
+</div>
+</body>
+
+
+{% endblock %} 
