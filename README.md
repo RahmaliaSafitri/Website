@@ -1,9 +1,14 @@
-# Website
+# Machine-Learning Website
 
-1. pip install django
-2. pip install django-filter
-3. django-admin startproject website
-4. python manage.py startapp clustering
+<b>1. Install Library<b>
+<ul>
+  <li>pip install django</li>
+  <li>pip install django-filter</li>
+</ul>
+<b>Start Project</b>
+django-admin startproject website
+<b>python manage.py startapp clustering<b>
+
 
 python manage.py createsuperuser
 
